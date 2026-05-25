@@ -45,7 +45,7 @@ delivery/
 │   ├── data_bundle.md                  ← per-section data appendix
 │   ├── catboost_selection_rationale.md
 │   ├── model_selection_report.md
-│   ├── figures/                        ← 17 paper figures (PNG)
+│   ├── figures/                        ← 10 paper figures (PNG)
 │   └── sections/                       ← bull_bear_paper.tex + cls/bst + ELS templates
 │
 ├── models/                             ← trained CatBoost binaries

@@ -29,7 +29,7 @@ The validation-honest variant (γ_0 = 0.50, δ = 0.05 selected on the 2022 valid
 
 ## 2. System Architecture
 
-![BBAQ-MAS framework](figure/framework.png)
+![BBAQ-MAS framework](figure/fig_framework.png)
 
 The conviction score for stock $i$ on trading day $t$ is
 
@@ -45,6 +45,12 @@ with cross-section z-scored agent outputs and regime-conditioned weights
 ```
 
 Portfolio: equal-weighted Top-5% by `c(i,t)`, 5-day holding period, 0.30% round-trip cost.
+
+### End-to-end experimental pipeline
+
+![BBAQ-MAS pipeline](figure/fig_pipeline.png)
+
+The pipeline above shows how each agent is trained, how the regime probabilities flow into the adaptive coefficients α(t) and γ(t), and how the conviction scores feed the portfolio construction and circuit-breaker layers.
 
 ### Four cooperating agents
 
@@ -247,7 +253,7 @@ The system was developed and validated through 20 sequential experiments under `
 │       │   └── model_selection/
 │       └── src/                     ← reproduction code (features + agents + backtest)
 │
-├── figure/                          ← all paper figures (17 PNGs, 300 dpi)
+├── figure/                          ← all paper figures (10 PNGs, 300 dpi)
 │
 ├── results/                         ← model-selection canonical CSVs (§5.2–§5.4)
 │   ├── main_compare_*/              ← 14-model comparison (BCE + MSE)

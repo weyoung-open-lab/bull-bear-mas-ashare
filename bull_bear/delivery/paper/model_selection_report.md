@@ -196,7 +196,7 @@ Bull-Bear 框架最终用 **G1 (动量) + G3 (强度)** 作为 Bear Agent 特征
 
 后续 SRD 实验进一步证明：用 macro_regime_3 做训练样本分流（路由），CatBoost-reg + G1+G2+G3+G4 + Routing 产生 SRD(bear, bull) = 0.694（见第 7 节）。这就是论文 §4.6 Adaptive Weighting via Regime Agent 的设计依据。
 
-![特征组消融曲线](../results/figures/feature_ablation_curve.png)
+![特征组消融曲线](../paper/figures/fig_feature_ablation.png)
 
 ---
 

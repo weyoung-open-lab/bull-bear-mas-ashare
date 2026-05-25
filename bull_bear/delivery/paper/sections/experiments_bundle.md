@@ -49,7 +49,7 @@ Source: `results/main_compare_20260506_225947_full_reg/metrics_summary.csv`
 | 13 | **EMA-slope** | factor | -0.4209 | -2.271 | 0.481 | 0.03 |
 | 14 | **Rel-Strength** | factor | -0.4322 | -1.957 | 0.495 | 0.04 |
 
-**Figure**: `paper/figures/model_compare_bar.png` (horizontal bar, CatBoost highlighted orange, GBDT green, DL purple, factor gray)
+**Figure**: `figures/fig_model_compare.png` (horizontal bar, CatBoost highlighted orange, GBDT green, DL purple, factor gray)
 
 **Findings**:
 1. CatBoost RankICIR 0.376 leads 2nd-place LightGBM-shallow-reg 0.330 by +4.7 pp absolute (+1416.9% relative).
@@ -75,7 +75,7 @@ Source: `results/binary_vs_regression.csv`
 | **ALSTM** | -0.007 | +0.177 | +0.184 |
 | **TabNet** | -0.037 | -0.299 | -0.261 |
 
-**Figure**: `paper/figures/bce_vs_mse_bar.png`
+**Figure**: `figures/fig_bce_vs_mse.png`
 
 **Finding**: 10 of 11 models gain from switching to MSE (TabNet inverts). CatBoost gains the most: Δ = +0.320. Within the MSE family, CatBoost jumps from BCE-rank 6 to MSE-rank 1, the largest re-ranking move observed.
 
@@ -96,7 +96,7 @@ Source: `results/feature_ablation_20260506_235253_full/feature_ablation.csv`
 | G1+G2+G3+G4+G5 | 24 | 0.253 |
 | Full(G1-G6) | 28 | 0.330 |
 
-**Figure**: `paper/figures/feature_ablation_curve.png`
+**Figure**: `figures/fig_feature_ablation.png`
 
 **Finding**: G1+G2+G3+G4 = 0.371 is the peak. Adding G5 (macro_regime_3) drops RankICIR by 11.7 pp to 0.253. macro_regime_3 has zero per-day cross-section variance, so as a feature it adds no ranking information. This motivates the design: G5 is used as a router by the Regime Agent rather than as a feature.
 
@@ -115,7 +115,7 @@ SRD(r1, r2) = 1 - Spearman( rank^SHAP_{r1}, rank^SHAP_{r2} )
 | LGBM-shallow MSE + G1234 | 0.291 | 0.308 | 0.575 |
 | CatBoost MSE + G1234 *star* | 0.694 | 0.488 | 0.543 |
 
-**Figure**: `paper/figures/srd_heatmap.png`
+**Figure**: `figures/fig_srd_heatmap.png`
 
 **Finding**: CatBoost + G1234 produces SRD(bear, bull) = **0.694**, vs LightGBM on the same features 0.291 (ratio 2.4x). CatBoost's oblivious-tree structure imposes the same split rule across an entire level, so regime-routed sub-models diverge sharply in feature ordering. This justifies CatBoost as the adversarial backbone: it amplifies regime-conditioned feature use that the Bear Agent exploits.
 
@@ -140,7 +140,7 @@ Source: `bull_bear/results/final_ablation.csv`
 | V | + Vol-gate (high vol -> Alpha) | 0.715 | +1.765 | -33.61% | +1175 |
 | FINAL | FINAL: adaptive α + anomaly + vol-gate | 0.712 | +1.772 | -33.48% | +1137 |
 
-**Figure**: `paper/figures/main_ablation_bar.png`
+**Figure**: `figures/fig_ablation_bar.png`
 
 **Narrative**:
 - **B0 vs T**: full 17-feature global CatBoost (0.297) is half of Trend single (0.598); feature pooling dilutes the strong G4 signal.
@@ -165,7 +165,7 @@ Source: `bull_bear/results/mechanism_validation.csv`
 | 0.3 | 0.595 | 0.716 | +1,215 |
 | 0.5 | 0.563 | 0.741 | +1,777 |
 
-**Figure**: `paper/figures/yx_mechanism.png`
+**Figure**: `figures/fig_yx_mechanism.png`
 
 **Finding**: As α grows from 0.1 to 0.5, Y monotonically increases (0.654 -> 0.741) while X monotonically decreases (0.607 -> 0.563). At α = 0.5 the gap is **+1,777 bp**. The monotonic widening rules out the additive-equivalence interpretation: if Bear ≈ −Alpha, then c = (1+α)·Alpha would only rescale ranks, not produce a 17.8-pp lift. The two estimators target different functionals of the conditional distribution (conditional mean for Alpha; conditional lower-tail expectation for Bear), so the trained functions diverge even though their targets correlate at ρ = -0.74.
 
@@ -188,7 +188,7 @@ Source: `bull_bear/results/final/rolling_walkforward.csv`
 | 2025 | 2016-2021 | +0.687 | +0.761 | +0.074 | Y |
 | **Mean** | -- | **+0.593** | **+0.692** | **+0.099** | **7/7** |
 
-**Figure**: `paper/figures/walkforward_yearly.png`
+**Figure**: `figures/fig_walkforward.png`
 
 **Finding**: D1c wins 7/7 legitimate evaluation years. Smallest gap +0.062 (2019); largest gap +0.140 (2022). Mean gap +0.099. The 2026 partial year (6 trading days) is excluded as statistical noise.
 
@@ -230,7 +230,7 @@ Source: `bull_bear/results/final/bear_quintile_analysis.csv`
 | Q5 (riskiest) | 563,724 | +0.421 | 4.61 | +0.021 |
 | **Q5 − Q1 MaxDD gap** | -- | -- | **+2.37 pp** (Wilcoxon rank-sum p < 0.001) | -- |
 
-**Figure**: `paper/figures/quintile_analysis.png`
+**Figure**: `figures/fig_quintile.png`
 
 **Findings**:
 1. MaxDD ordering is **monotone** Q1 -> Q5 (2.24% -> 4.61%, gap +2.37 pp, p < 0.001). Bear genuinely predicts forward drawdown risk.
