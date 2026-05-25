@@ -1,0 +1,2 @@
+﻿n_days,n_bootstrap,observed_trend_rankicir,observed_d1_rankicir,observed_delta,bootstrap_mean_delta,bootstrap_ci_low,bootstrap_ci_high,p_value
+733,1000,0.597898493609247,0.7407736563826176,0.14287516277337065,0.14298186293152218,0.10644559805020075,0.18075696051935727,0.0

@@ -1,0 +1,57 @@
+{
+  "timestamp": "20260506_235253",
+  "base_model": "LightGBM-shallow-reg",
+  "ablation_path": [
+    {
+      "config": "G1",
+      "groups": [
+        "G1"
+      ]
+    },
+    {
+      "config": "G1+G2",
+      "groups": [
+        "G1",
+        "G2"
+      ]
+    },
+    {
+      "config": "G1+G2+G3",
+      "groups": [
+        "G1",
+        "G2",
+        "G3"
+      ]
+    },
+    {
+      "config": "G1+G2+G3+G4",
+      "groups": [
+        "G1",
+        "G2",
+        "G3",
+        "G4"
+      ]
+    },
+    {
+      "config": "G1+G2+G3+G4+G5",
+      "groups": [
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5"
+      ]
+    },
+    {
+      "config": "Full(G1-G6)",
+      "groups": [
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5",
+        "G6"
+      ]
+    }
+  ]
+}

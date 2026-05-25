@@ -1,0 +1,105 @@
+# ============================================================
+# Data files (large binaries, not committed)
+# ============================================================
+*.parquet
+*.feather
+*.h5
+*.pkl
+
+# CatBoost / model binaries (use models/README.md to retrain)
+*.cbm
+*.cbsnapshot
+
+# Compressed archives
+*.zip
+*.7z
+*.rar
+*.tar
+*.tar.gz
+
+# ============================================================
+# Legacy / out-of-scope folders (excluded per repo organization)
+# ============================================================
+mas/
+数据集分析输出/
+Springer_Nature_LaTeX_Template__2_/
+Springer_Nature_LaTeX_Template__2_.zip
+股票shap.zip
+
+# ============================================================
+# Drafts / documents (not source code; tracked elsewhere)
+# ============================================================
+*.docx
+*.pdf
+~$*
+
+# ============================================================
+# Python cache / virtual envs
+# ============================================================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+env/
+ENV/
+
+# ============================================================
+# IDE / OS
+# ============================================================
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# ============================================================
+# Claude Code / agent state
+# ============================================================
+.claude/
+
+# ============================================================
+# Logs / debug
+# ============================================================
+*.log
+*.out
+.ipynb_checkpoints/
+
+# ============================================================
+# Jupyter
+# ============================================================
+*.ipynb_checkpoints/
+
+# ============================================================
+# Allow specific dot-files
+# ============================================================
+!.gitignore
+!.gitkeep
+
+# ============================================================
+# Delivery package — keep trained models, paper PDF, Elsevier templates
+# ============================================================
+!bull_bear/delivery/**/*.cbm
+!bull_bear/delivery/**/*.pdf
+!bull_bear/delivery/**/*.jpeg
+!bull_bear/delivery/**/*.jpg
+
+# ============================================================
+# Canonical Alpha Agent model (runtime import target)
+# ============================================================
+!bull_bear/results/models/alpha_agent.cbm
+
+# Stray local file (kept out of repo)
+新建 文本文档.txt
+
+# ============================================================
+# Local working paper directory (LaTeX sources kept off the public repo)
+# ============================================================
+多agent选股/

@@ -1,0 +1,37 @@
+{
+  "timestamp": "20260507_013022",
+  "base_model": "LightGBM-shallow-reg",
+  "regression_target": true,
+  "preprocess": "raw",
+  "feature_groups": [
+    "G1",
+    "G2",
+    "G3",
+    "G4"
+  ],
+  "features": [
+    "ret_1d",
+    "ret_3d",
+    "ret_5d",
+    "ret_10d",
+    "momentum_change",
+    "ret_1d_minus_5d",
+    "ret_3d_minus_10d",
+    "ret_1d_minus_3d",
+    "roc_20",
+    "ema30_slope_vr",
+    "ema30_slope",
+    "ma30_slope",
+    "ema60_slope",
+    "ema90_slope",
+    "ema180_slope",
+    "ma60_slope",
+    "ma180_slope",
+    "bias_60",
+    "bias_60_vr",
+    "board_rank_20d_pct",
+    "board_rs_20d"
+  ],
+  "shap_sample_per_regime": 20000,
+  "regime_routing_column": "macro_regime_3"
+}

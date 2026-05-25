@@ -1,0 +1,28 @@
+{
+  "timestamp": "20260506_225947",
+  "models": [
+    "Momentum-5d",
+    "EMA-slope",
+    "Rel-Strength",
+    "Ridge",
+    "LightGBM-std-reg",
+    "LightGBM-shallow-reg",
+    "LightGBM-conservative-reg",
+    "XGBoost-reg",
+    "CatBoost-reg",
+    "RandomForest-reg",
+    "TabNet-reg",
+    "FT-Transformer-reg",
+    "ALSTM-reg",
+    "TCN-reg"
+  ],
+  "feature_groups": [
+    "G1",
+    "G2",
+    "G3",
+    "G4",
+    "G5",
+    "G6"
+  ],
+  "sample_tickers": null
+}

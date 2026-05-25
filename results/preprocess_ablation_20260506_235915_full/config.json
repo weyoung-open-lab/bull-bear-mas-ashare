@@ -1,0 +1,13 @@
+{
+  "timestamp": "20260506_235915",
+  "models": [
+    "Ridge",
+    "LightGBM-shallow-reg",
+    "FT-Transformer-reg"
+  ],
+  "preprocess_modes": [
+    "raw",
+    "zscore",
+    "standard"
+  ]
+}

@@ -1,0 +1,8 @@
+﻿metric,value
+feature_importance_top5,rev_mkt_excess_1d=32.07; ret_1d=28.34; rev_zscore_1d=12.37; rev_ret_3d_minus_1d=11.58; rev_ret_2d=7.82
+corr_reversal_alpha_pearson,+0.1335
+corr_reversal_alpha_spearman,+0.1128
+corr_reversal_bear_pearson,-0.0356
+corr_reversal_bear_spearman,+0.0612
+standalone_rankicir,+0.3215
+yearly_rankicir,2023:+0.3978; 2024:+0.2123; 2025:+0.4269; 2026:+0.0699

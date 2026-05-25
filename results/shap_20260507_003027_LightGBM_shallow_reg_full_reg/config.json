@@ -1,0 +1,14 @@
+{
+  "timestamp": "20260507_003027",
+  "base_model": "LightGBM-shallow-reg",
+  "shap_sample": 20000,
+  "top1pct_cap": 20000,
+  "n_features": 28,
+  "n_test": 2817230,
+  "years": [
+    2023,
+    2024,
+    2025,
+    2026
+  ]
+}

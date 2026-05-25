@@ -1,0 +1,26 @@
+{
+  "timestamp": "20260506_220833",
+  "models": [
+    "Momentum-5d",
+    "EMA-slope",
+    "Rel-Strength",
+    "LogisticRegression",
+    "LightGBM-std",
+    "LightGBM-shallow",
+    "LightGBM-conservative",
+    "XGBoost",
+    "CatBoost",
+    "RandomForest",
+    "TabNet",
+    "FT-Transformer"
+  ],
+  "feature_groups": [
+    "G1",
+    "G2",
+    "G3",
+    "G4",
+    "G5",
+    "G6"
+  ],
+  "sample_tickers": null
+}
