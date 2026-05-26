@@ -164,7 +164,7 @@ Sorting stocks by Bear score and partitioning into five buckets:
 
 Eleven supervised models + three momentum-factor baselines, evaluated under both BCE (binary) and MSE (regression) tracks:
 
-![BCE vs MSE comparison](figure/fig_bce_vs_mse.png)
+
 
 **Findings:**
 - **Regression beats binary for 10 / 11 models** — MSE on `r_future_5` retains more ordinal information than BCE on the thresholded label.
